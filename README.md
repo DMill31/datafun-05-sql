@@ -116,3 +116,59 @@ sql_queries folder:
 Use Python to execute the SQL queries and maybe chart, illustrate, and/or summarize your findings:
 
 db03_queries.py
+
+
+
+## Top Tools in SQL
+
+1. SELECT and FROM Statement
+
+The SELECT statement is the foundational tool for SQL for data analysis. It allows you to retrieve specific data from a database table, including specific columns, rows, or calculated values. TheFROM statement specifies the location or table from which the data needs to be retrieved.
+
+2. WHERE Clause
+
+The WHERE clause is used for filtering data. It allows you to specify conditions that the data must meet to be included in the query results. This is crucial for isolating relevant data.
+
+3. GROUP BY Clause
+
+The GROUP BY clause is used for data aggregation. It allows you to group rows with similar values in one or more columns and perform aggregate functions (e.g., SUM, AVG, COUNT) on those groups.
+
+4. JOIN Operations
+
+SQL supports different types of joins, including INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN, which enable you to combine data from multiple tables based on specified criteria.
+
+5. ORDER BY Clause
+
+The ORDER BY clause is used to sort query results in ascending or descending order based on one or more columns. It’s used for arranging data for analysis.
+
+6. Mathematical and Statistical Functions
+
+SQL provides a variety of built-in functions for performing mathematical and statistical calculations on data, such as SUM, AVG, MAX, MIN, STDDEV, and VARIANCE.
+
+7. Date and Time Functions
+
+SQL offers functions for handling date and time data, allowing for time-series analysis, date arithmetic, and formatting.
+
+8. Subqueries
+
+Subqueries, or nested queries, enable you to use the result of one query as input for another query. This is useful for complex data analysis tasks.
+
+9. Data Modification Statements
+
+SQL not only retrieves data but also allows you to modify data using statements like INSERT, UPDATE, and DELETE. This is important for data preparation and cleaning.
+
+10. Window Functions
+
+Window functions, like RANK(), LEAD(), and LAG(), are useful for performing calculations across rows within a specific window or partition of data.
+
+11. Stored Procedures and User-Defined Functions (UDFs)
+
+SQL databases often support the creation of stored procedures and user-defined functions. These can be used to encapsulate complex analysis logic for reuse.
+
+12. Indexing
+
+SQL databases provide indexing mechanisms to improve query performance, making data retrieval faster, which is crucial for large datasets.
+
+13. Reporting Tools
+
+Many SQL-based database management systems offer reporting and visualisation tools that allow you to create charts, graphs, and reports based on SQL query results.
