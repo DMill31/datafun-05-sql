@@ -1,0 +1,5 @@
+2025-02-10 11:53:45.493 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 11:56:10.678 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 11:56:10.679 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-10 11:56:10.684 | INFO     | __main__:drop_tables:26 - Tables dropped
+2025-02-10 11:56:10.687 | INFO     | __main__:create_tables:41 - Tables created
