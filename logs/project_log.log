@@ -3,3 +3,22 @@
 2025-02-10 11:56:10.679 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
 2025-02-10 11:56:10.684 | INFO     | __main__:drop_tables:26 - Tables dropped
 2025-02-10 11:56:10.687 | INFO     | __main__:create_tables:41 - Tables created
+2025-02-10 12:11:57.848 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 12:11:57.849 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-10 12:11:57.853 | INFO     | __main__:drop_tables:26 - Tables dropped
+2025-02-10 12:11:57.857 | INFO     | __main__:create_tables:41 - Tables created
+2025-02-10 12:11:57.860 | ERROR    | __main__:insert_data:55 - Error inserting data:
+2025-02-10 12:14:04.534 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 12:14:04.534 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-10 12:14:04.539 | INFO     | __main__:drop_tables:26 - Tables dropped
+2025-02-10 12:14:04.543 | INFO     | __main__:create_tables:41 - Tables created
+2025-02-10 12:14:04.545 | ERROR    | __main__:insert_data:55 - Error inserting data:
+2025-02-10 12:14:25.371 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 12:14:25.372 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-10 12:14:25.377 | INFO     | __main__:drop_tables:26 - Tables dropped
+2025-02-10 12:14:25.380 | INFO     | __main__:create_tables:41 - Tables created
+2025-02-10 12:14:25.382 | ERROR    | __main__:insert_data:55 - Error inserting data:
+2025-02-10 12:16:41.588 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-10 12:16:41.588 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-10 12:16:41.593 | INFO     | __main__:drop_tables:26 - Tables dropped
+2025-02-10 12:16:41.596 | INFO     | __main__:create_tables:41 - Tables created
