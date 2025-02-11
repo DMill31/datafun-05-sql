@@ -25,4 +25,4 @@ VALUES
     ('c6e67918-e509-4a6b-bc3a-979f6ad802f0', 'Pride and Prejudice', 1813, '4dca0632-2c53-490c-99d5-4f6d41e56c0e'),
     ('be951205-6cc2-4b3d-96f1-7257b8fc8c0f', 'The Hobbit', 1937, '16f3e0a1-24cb-4ed6-a50d-509f63e367f7'),
     ('f1b3b3b4-1b3b-4b3b-8b3b-1b3b3b1b3b3b', 'The Lord of the Rings', 1954, '06cf58ab-90f1-448d-8e54-055e4393e75c'),
-    ('f1b3b3b4-1b3b-4b3b-8b3b-1b3b3b1b3b3b', 'Harry Potter and the Philosopher''s Stone', 1997, '6b693b96-394a-4a1d-a4e2-792a47d7a568');
+    ('ca8e64c3-1e67-47f5-82cc-3e4e30f63b75', 'Harry Potter and the Philosopher''s Stone', 1997, '6b693b96-394a-4a1d-a4e2-792a47d7a568');
