@@ -64,3 +64,223 @@
 2025-02-12 09:32:44.875 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
 2025-02-12 09:32:44.907 | INFO     | __main__:update_db:15 - Database updated
 2025-02-12 09:32:44.911 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 09:40:54.816 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:40:54.816 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-12 09:40:54.820 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-12 09:40:54.824 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-12 09:40:58.147 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:40:58.180 | INFO     | __main__:update_db:15 - Database updated
+2025-02-12 09:40:58.184 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 09:41:11.962 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:41:11.963 | ERROR    | __main__:aggregation:18 - Error performing aggregation:
+2025-02-12 09:44:21.587 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:44:21.588 | ERROR    | __main__:aggregation:19 - Error performing aggregation:
+2025-02-12 09:47:16.132 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:47:16.133 | ERROR    | __main__:aggregation:19 - Error performing aggregation:
+2025-02-12 09:50:01.994 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:50:01.994 | ERROR    | __main__:aggregation:25 - Error performing aggregation:
+2025-02-12 09:50:43.226 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:52:10.395 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:52:10.396 | ERROR    | __main__:aggregation:25 - Error performing aggregation:
+2025-02-12 09:54:27.651 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:54:27.652 | ERROR    | __main__:aggregation:21 - Error performing aggregation:
+2025-02-12 09:54:31.315 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:54:31.315 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-12 09:54:31.353 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-12 09:54:31.359 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-12 09:54:34.399 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:54:34.435 | INFO     | __main__:update_db:15 - Database updated
+2025-02-12 09:54:34.440 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 09:54:39.035 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:54:39.036 | ERROR    | __main__:aggregation:21 - Error performing aggregation:
+2025-02-12 09:56:51.489 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:56:51.490 | ERROR    | __main__:aggregation:21 - Error performing aggregation:
+2025-02-12 09:57:29.915 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:06:06.875 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:06:06.876 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-12 10:06:06.880 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-12 10:06:06.884 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-12 10:06:09.664 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:06:09.718 | INFO     | __main__:update_db:15 - Database updated
+2025-02-12 10:06:09.722 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 10:06:33.808 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:06:33.809 | INFO     | __main__:aggregation:34 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:06:33.809 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:06:33.809 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:06:33.810 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:06:33.810 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+2025-02-12 10:06:33.810 | INFO     | __main__:aggregation:35 - All aggregations performed
+2025-02-12 10:07:40.445 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:07:40.446 | INFO     | __main__:aggregation:34 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:07:40.447 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:07:40.447 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:07:40.447 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:07:40.447 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+2025-02-12 10:07:40.448 | INFO     | __main__:aggregation:36 - All aggregations performed
+2025-02-12 10:07:57.921 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:07:57.922 | INFO     | __main__:aggregation:34 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:07:57.925 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:07:57.926 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:07:57.926 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:07:57.927 | INFO     | __main__:aggregation:34 - Aggreation performed: 
+2025-02-12 10:07:57.927 | INFO     | __main__:aggregation:36 - All aggregations performed
+2025-02-12 10:11:12.189 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:11:12.190 | INFO     | __main__:aggregation:35 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:11:12.193 | INFO     | __main__:aggregation:35 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:11:12.194 | INFO     | __main__:aggregation:35 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:11:12.195 | INFO     | __main__:aggregation:35 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:12:55.591 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:12:55.593 | INFO     | __main__:aggregation:36 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:12:55.596 | INFO     | __main__:aggregation:36 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:12:55.597 | INFO     | __main__:aggregation:36 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:12:55.599 | INFO     | __main__:aggregation:36 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:14:28.634 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:14:28.635 | INFO     | __main__:aggregation:37 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:14:28.638 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:14:28.639 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:14:28.640 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:14:28.642 | INFO     | __main__:aggregation:39 - All aggregations performed
+2025-02-12 10:15:44.961 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:15:44.963 | INFO     | __main__:aggregation:37 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:15:44.963 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:15:44.963 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:15:44.964 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:15:44.964 | INFO     | __main__:aggregation:40 - All aggregations performed
+2025-02-12 10:16:13.195 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:16:13.197 | INFO     | __main__:aggregation:37 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:16:13.197 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:16:13.198 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:16:13.198 | INFO     | __main__:aggregation:37 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:16:13.198 | INFO     | __main__:aggregation:40 - All aggregations performed
+2025-02-12 10:16:49.005 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 10:16:49.006 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 10:16:49.007 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 10:16:49.007 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 10:16:49.008 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 10:16:49.008 | INFO     | __main__:aggregation:23 - All aggregations performed
