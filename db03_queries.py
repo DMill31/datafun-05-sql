@@ -68,10 +68,32 @@ def sorting():
     for s in sorts:
         print(s)
 
+def grouping():
+    """Perform grouping on the database."""
+    try:
+        with sqlite3.connect(db_file) as conn:
+            sql_file = pathlib.Path("sql_queries", "query_group_by.sql")
+            with open(sql_file, "r") as file:
+                sql_script = file.read()
+                statements = sql_script.split(";")
+                groups = []
+                for statement in statements:
+                    if statement == "":
+                        break
+                    df = pd.read_sql_query(statement, conn)
+                    logger.info(f"Grouping performed: {statement}")
+                    groups.append(pd.DataFrame(df))
+            logger.info("All groups performed")
+    except sqlite3.Error as e:
+        logger.error("Error performing grouping:", e)
+    for g in groups:
+        print(g)
+
 def main():
     aggregation()
     filter()
     sorting()
+    grouping()
 
 if __name__ == "__main__":
     main()

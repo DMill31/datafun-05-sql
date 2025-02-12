@@ -345,3 +345,81 @@ SELECT * FROM books ORDER BY num_pages DESC
 -- Sort authors by year born in ascending order
 SELECT * FROM authors ORDER BY year_born ASC
 2025-02-12 11:49:26.571 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:05:05.476 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:05:05.477 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:05:05.477 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:05:05.478 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:05:05.479 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:05:05.479 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:05:05.485 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:05:05.486 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:05:05.486 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:05:05.492 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:05:05.492 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:05:05.493 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:05:24.256 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:05:24.258 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:05:24.258 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:05:24.259 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:05:24.259 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:05:24.259 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:05:24.265 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:05:24.266 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:05:24.266 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:05:24.272 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:05:24.272 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:05:24.273 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:05:24.278 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:05:24.278 | INFO     | __main__:grouping:86 - All groups performed
