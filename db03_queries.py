@@ -26,8 +26,30 @@ def aggregation():
     for a in aggregations:
         print(a)
 
+def filter():
+    """Perform filtering on the database."""
+    try:
+        with sqlite3.connect(db_file) as conn:
+            sql_file = pathlib.Path("sql_queries", "query_filter.sql")
+            with open(sql_file, "r") as file:
+                sql_script = file.read()
+                statements = sql_script.split(";")
+                filters = []
+                for statement in statements:
+                    if statement == "":
+                        break
+                    df = pd.read_sql_query(statement, conn)
+                    logger.info(f"Filtering performed: {statement}")
+                    filters.append(pd.DataFrame(df))
+            logger.info("All filters performed")
+    except sqlite3.Error as e:
+        logger.error("Error performing filtering:", e)
+    for f in filters:
+        print(f)
+
 def main():
     aggregation()
+    filter()
 
 if __name__ == "__main__":
     main()
