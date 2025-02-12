@@ -47,9 +47,31 @@ def filter():
     for f in filters:
         print(f)
 
+def sorting():
+    """Perform sorting on the database."""
+    try:
+        with sqlite3.connect(db_file) as conn:
+            sql_file = pathlib.Path("sql_queries", "query_sorting.sql")
+            with open(sql_file, "r") as file:
+                sql_script = file.read()
+                statements = sql_script.split(";")
+                sorts = []
+                for statement in statements:
+                    if statement == "":
+                        break
+                    df = pd.read_sql_query(statement, conn)
+                    logger.info(f"Sorting performed: {statement}")
+                    sorts.append(pd.DataFrame(df))
+            logger.info("All sorts performed")
+    except sqlite3.Error as e:
+        logger.error("Error performing sorting:", e)
+    for s in sorts:
+        print(s)
+
 def main():
     aggregation()
     filter()
+    sorting()
 
 if __name__ == "__main__":
     main()
