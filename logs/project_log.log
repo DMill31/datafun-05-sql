@@ -50,3 +50,17 @@
 2025-02-11 14:39:30.673 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
 2025-02-11 14:39:30.693 | INFO     | __main__:update_db:15 - Database updated
 2025-02-11 14:39:30.696 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 09:30:04.911 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:30:04.911 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-12 09:30:04.917 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-12 09:30:04.920 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-12 09:30:09.995 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:30:10.031 | INFO     | __main__:update_db:15 - Database updated
+2025-02-12 09:30:10.035 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-12 09:32:39.203 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:32:39.204 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-12 09:32:39.209 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-12 09:32:39.213 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-12 09:32:44.875 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 09:32:44.907 | INFO     | __main__:update_db:15 - Database updated
+2025-02-12 09:32:44.911 | INFO     | __main__:delete_db:28 - Record deleted
