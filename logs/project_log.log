@@ -423,3 +423,295 @@ SELECT COUNT(*) AS num_books,
 FROM books
 GROUP BY page_range
 2025-02-12 12:05:24.278 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:12:34.160 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:12:34.161 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:12:34.162 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:12:34.162 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:12:34.162 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:12:34.163 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:12:34.169 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:12:34.170 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:12:34.170 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:12:34.176 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:12:34.176 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:12:34.176 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:12:34.183 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:12:34.183 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:12:34.186 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.author_id, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+2025-02-12 12:12:34.186 | INFO     | __main__:join:107 - All joins performed
+2025-02-12 12:13:23.984 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:13:23.985 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:13:23.985 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:13:23.986 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:13:23.986 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:13:23.986 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:13:23.993 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:13:23.993 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:13:23.994 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:13:23.999 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:13:24.000 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:13:24.000 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:13:24.005 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:13:24.005 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:13:24.007 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+2025-02-12 12:13:24.008 | INFO     | __main__:join:107 - All joins performed
+2025-02-12 12:13:57.768 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:13:57.769 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:13:57.770 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:13:57.770 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:13:57.771 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:13:57.771 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:13:57.777 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:13:57.778 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:13:57.778 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:13:57.784 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:13:57.784 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:13:57.784 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:13:57.789 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:13:57.790 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:13:57.791 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+2025-02-12 12:14:21.434 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:14:21.435 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:14:21.436 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:14:21.436 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:14:21.437 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:14:21.437 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:14:21.443 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:14:21.444 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:14:21.444 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:14:21.449 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:14:21.450 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:14:21.450 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:14:21.455 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:14:21.455 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:14:21.457 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+2025-02-12 12:14:40.408 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:14:40.409 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:14:40.410 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:14:40.411 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:14:40.411 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:14:40.411 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:14:40.417 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:14:40.417 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:14:40.418 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:14:40.423 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:14:40.423 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:14:40.424 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:14:40.429 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:14:40.429 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:14:40.431 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+2025-02-12 12:15:10.856 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-12 12:15:10.857 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-12 12:15:10.858 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-12 12:15:10.858 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-12 12:15:10.859 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-12 12:15:10.859 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-12 12:15:10.865 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-12 12:15:10.866 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-12 12:15:10.866 | INFO     | __main__:filter:44 - All filters performed
+2025-02-12 12:15:10.871 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-12 12:15:10.872 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-12 12:15:10.872 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-12 12:15:10.877 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-12 12:15:10.878 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-12 12:15:10.880 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+ORDER BY books.year_published DESC
+2025-02-12 12:15:10.880 | INFO     | __main__:join:107 - All joins performed

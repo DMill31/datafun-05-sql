@@ -89,11 +89,33 @@ def grouping():
     for g in groups:
         print(g)
 
+def join():
+    """Perform joins on the database."""
+    try:
+        with sqlite3.connect(db_file) as conn:
+            sql_file = pathlib.Path("sql_queries", "query_join.sql")
+            with open(sql_file, "r") as file:
+                sql_script = file.read()
+                statements = sql_script.split(";")
+                joins = []
+                for statement in statements:
+                    if statement == "":
+                        break
+                    df = pd.read_sql_query(statement, conn)
+                    logger.info(f"Join performed: {statement}")
+                    joins.append(pd.DataFrame(df))
+            logger.info("All joins performed")
+    except sqlite3.Error as e:
+        logger.error("Error performing joins:", e)
+    for j in joins:
+        print(j)
+
 def main():
     aggregation()
     filter()
     sorting()
     grouping()
+    join()
 
 if __name__ == "__main__":
     main()
