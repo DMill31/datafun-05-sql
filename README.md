@@ -172,3 +172,42 @@ SQL databases provide indexing mechanisms to improve query performance, making d
 13. Reporting Tools
 
 Many SQL-based database management systems offer reporting and visualisation tools that allow you to create charts, graphs, and reports based on SQL query results.
+
+## The Database
+
+### The Tables
+
+This project contains two related tables, one of which has a Foreign Key
+
+- **authors** (table regarding the information about authors of novels)
+    Features:
+        - author_id
+        - first
+        - last
+        - year_born
+
+- **books** (table regarding the information about books)
+    Features:
+        - book_id
+        - title
+        - year_published
+        - author_id (Foreign Key)
+        - num_pages
+
+### SQL Files
+
+There are **three** SQL folders that, when combined, contain a total of **ten** SQL files.
+
+- sql_create is a folder containing SQL files that are meant to create and fill tables
+- sql_features is a folder containing SQL files that are meant to update tables
+- sql_queries is a folder containing SQL files that are meant to perform tasks using information from the tables
+
+Each SQL folder has a complementary Python file that runs the tasks for them.
+
+### How to Run
+
+It is imperative that the python scripts are executed in the correct order.
+
+1. db01_setup.py (deletes any existing tables and creates and fills new ones)
+2. db02_features.py (alters these newly made tables with new features)
+3. db03_queries.py (performs queries on the updated tables)

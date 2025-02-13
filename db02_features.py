@@ -1,3 +1,5 @@
+"""Python script to update a database with new features."""
+
 import sqlite3
 import pathlib
 from utils_logger import logger

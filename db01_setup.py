@@ -1,3 +1,5 @@
+"""Python script to create a new SQLite database, create tables, and insert data from CSV files."""
+
 import sqlite3
 import pandas as pd
 import pathlib

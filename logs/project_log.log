@@ -806,3 +806,16 @@ FROM books
 2025-02-13 09:20:20.071 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_sorting.sql
 2025-02-13 09:20:20.076 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_group_by.sql
 2025-02-13 09:20:20.078 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_join.sql
+2025-02-13 09:34:58.223 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:34:58.223 | INFO     | __main__:create_db:16 - Database created: project.sqlite3
+2025-02-13 09:34:58.228 | INFO     | __main__:drop_tables:29 - Tables dropped
+2025-02-13 09:34:58.231 | INFO     | __main__:create_tables:44 - Tables created
+2025-02-13 09:35:44.368 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:35:44.400 | INFO     | __main__:update_db:17 - Database updated
+2025-02-13 09:35:44.404 | INFO     | __main__:delete_db:30 - Record deleted
+2025-02-13 09:36:05.767 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:36:05.769 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:36:05.775 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_filter.sql
+2025-02-13 09:36:05.781 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_sorting.sql
+2025-02-13 09:36:05.786 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_group_by.sql
+2025-02-13 09:36:05.789 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_join.sql
