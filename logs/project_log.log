@@ -715,3 +715,94 @@ FROM authors
 LEFT JOIN books ON authors.author_id = books.author_id
 ORDER BY books.year_published DESC
 2025-02-12 12:15:10.880 | INFO     | __main__:join:107 - All joins performed
+2025-02-13 09:12:00.558 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:12:00.559 | INFO     | __main__:create_db:14 - Database created: project.sqlite3
+2025-02-13 09:12:00.563 | INFO     | __main__:drop_tables:27 - Tables dropped
+2025-02-13 09:12:00.566 | INFO     | __main__:create_tables:42 - Tables created
+2025-02-13 09:12:06.975 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:12:07.006 | INFO     | __main__:update_db:15 - Database updated
+2025-02-13 09:12:07.009 | INFO     | __main__:delete_db:28 - Record deleted
+2025-02-13 09:12:12.757 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:12:12.758 | INFO     | __main__:aggregation:21 - Aggreation performed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-13 09:12:12.759 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-13 09:12:12.759 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-13 09:12:12.760 | INFO     | __main__:aggregation:21 - Aggreation performed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-13 09:12:12.760 | INFO     | __main__:aggregation:23 - All aggregations performed
+2025-02-13 09:12:12.767 | INFO     | __main__:filter:42 - Filtering performed: -- Filter authors by year born
+SELECT * FROM authors WHERE year_born < 1900
+2025-02-13 09:12:12.768 | INFO     | __main__:filter:42 - Filtering performed: 
+
+-- Filter books by page count
+SELECT * FROM books WHERE num_pages > 200 AND num_pages < 500
+2025-02-13 09:12:12.768 | INFO     | __main__:filter:44 - All filters performed
+2025-02-13 09:12:12.774 | INFO     | __main__:sorting:63 - Sorting performed: -- Sort books by number of pages in descending order
+SELECT * FROM books ORDER BY num_pages DESC
+2025-02-13 09:12:12.774 | INFO     | __main__:sorting:63 - Sorting performed: 
+
+-- Sort authors by year born in ascending order
+SELECT * FROM authors ORDER BY year_born ASC
+2025-02-13 09:12:12.775 | INFO     | __main__:sorting:65 - All sorts performed
+2025-02-13 09:12:12.780 | INFO     | __main__:grouping:84 - Grouping performed: -- Group books by range of number of pages
+SELECT COUNT(*) AS num_books, 
+       CASE
+           WHEN num_pages < 200 THEN '0-199'
+           WHEN num_pages < 400 THEN '200-399'
+           ELSE '400+'
+       END AS page_range
+FROM books
+GROUP BY page_range
+2025-02-13 09:12:12.780 | INFO     | __main__:grouping:86 - All groups performed
+2025-02-13 09:12:12.782 | INFO     | __main__:join:105 - Join performed: -- Join the tables to select all authors, and the release dates of their books
+SELECT authors.last, books.year_published
+FROM authors
+LEFT JOIN books ON authors.author_id = books.author_id
+ORDER BY books.year_published DESC
+2025-02-13 09:12:12.783 | INFO     | __main__:join:107 - All joins performed
+2025-02-13 09:16:28.463 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:16:28.464 | INFO     | __main__:execute_query:125 - Query executed: -- Count all books
+SELECT COUNT(*) AS num_books
+FROM books
+2025-02-13 09:16:28.464 | INFO     | __main__:execute_query:125 - Query executed: 
+
+-- Count all authors
+SELECT COUNT(*) AS num_authors
+FROM authors
+2025-02-13 09:16:28.465 | INFO     | __main__:execute_query:125 - Query executed: 
+
+-- Sum up the number of pages in all books
+SELECT SUM(num_pages) AS total_pages
+FROM books
+2025-02-13 09:16:28.465 | INFO     | __main__:execute_query:125 - Query executed: 
+
+-- Find the average number of pages in all books
+SELECT AVG(num_pages) AS avg_pages
+FROM books
+2025-02-13 09:16:28.465 | INFO     | __main__:execute_query:127 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:17:02.201 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:17:02.203 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:19:00.720 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:19:00.722 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:19:00.728 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_filter.sql
+2025-02-13 09:19:00.734 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_sorting.sql
+2025-02-13 09:19:00.740 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_group_by.sql
+2025-02-13 09:19:00.742 | INFO     | __main__:execute_query:126 - Query executed: sql_queries\query_join.sql
+2025-02-13 09:20:20.057 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:20:20.059 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:20:20.065 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_filter.sql
+2025-02-13 09:20:20.071 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_sorting.sql
+2025-02-13 09:20:20.076 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_group_by.sql
+2025-02-13 09:20:20.078 | INFO     | __main__:execute_query:21 - Query executed: sql_queries\query_join.sql
