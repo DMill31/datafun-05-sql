@@ -209,5 +209,11 @@ Each SQL folder has a complementary Python file that runs the tasks for them.
 It is imperative that the python scripts are executed in the correct order.
 
 1. db01_setup.py (deletes any existing tables and creates and fills new ones)
+    Correct Output:
+    ![db01_setup.py output](https://github.com/DMill31/datafun-05-sql/blob/main/Screenshot%202025-02-13%20093538.png)
 2. db02_features.py (alters these newly made tables with new features)
+    Correct Output:
+    ![db02_features.py output](https://github.com/DMill31/datafun-05-sql/blob/main/Screenshot%202025-02-13%20093600.png)
 3. db03_queries.py (performs queries on the updated tables)
+    Correct Output:
+    ![db03_queries.py output](https://github.com/DMill31/datafun-05-sql/blob/main/Screenshot%202025-02-13%20093635.png)
