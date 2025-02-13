@@ -217,3 +217,10 @@ It is imperative that the python scripts are executed in the correct order.
 3. db03_queries.py (performs queries on the updated tables)
     Correct Output:
     ![db03_queries.py output](https://github.com/DMill31/datafun-05-sql/blob/main/Screenshot%202025-02-13%20093635.png)
+
+Commands:
+```shell
+py db01_setup.py
+py db02_features.py
+py db03_queries.py
+```

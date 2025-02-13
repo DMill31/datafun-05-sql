@@ -819,3 +819,19 @@ FROM books
 2025-02-13 09:36:05.781 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_sorting.sql
 2025-02-13 09:36:05.786 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_group_by.sql
 2025-02-13 09:36:05.789 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_join.sql
+2025-02-13 09:45:16.742 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:45:16.744 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:45:16.752 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_filter.sql
+2025-02-13 09:45:16.759 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_sorting.sql
+2025-02-13 09:45:16.765 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_group_by.sql
+2025-02-13 09:45:16.768 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_join.sql
+2025-02-13 09:45:54.469 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:45:54.471 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_aggregation.sql
+2025-02-13 09:45:54.476 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_filter.sql
+2025-02-13 09:45:54.481 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_sorting.sql
+2025-02-13 09:45:54.486 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_group_by.sql
+2025-02-13 09:45:54.488 | INFO     | __main__:execute_query:23 - Query executed: sql_queries\query_join.sql
+2025-02-13 09:54:40.789 | INFO     | utils_logger:<module>:41 - Logging to file: logs\project_log.log
+2025-02-13 09:54:40.789 | INFO     | __main__:create_db:16 - Database created: project.sqlite3
+2025-02-13 09:54:40.794 | INFO     | __main__:drop_tables:29 - Tables dropped
+2025-02-13 09:54:40.797 | INFO     | __main__:create_tables:44 - Tables created
